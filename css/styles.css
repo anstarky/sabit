@@ -1,0 +1,208 @@
+html {
+	box-sizing: border-box;
+	background-color: grey;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	min-width: 320px;
+	padding: 15px;
+	margin: 0 auto;
+	background-color: #ffffff;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	height: 72px;
+}
+
+.logo__link {
+	display: inline-block;
+}
+
+.header-right {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.mobile-button {
+	float: right;
+}
+
+.mobile-button span {
+	position: relative;
+	display: block;
+	width: 26px;
+	height: 3px;
+	background: #3e3e3e;
+	transition: all 0.3s ease-out;
+	backface-visibility: hidden;
+}
+
+.mobile-button span:before,
+.mobile-button span:after {
+	position: absolute;
+	content: '';
+	display: block;
+	width: 26px;
+	height: 3px;
+	background-color: #3e3e3e;
+	backface-visibility: hidden;
+	transition: all 0.3s ease-out;
+}
+
+.mobile-button span:before {
+	top: -7px;
+}
+
+.mobile-button span:after {
+	bottom: -7px;
+}
+
+.mobile-button.open span {
+	background: transparent;
+}
+
+.mobile-button.open span:before {
+	background: #3e3e3e;
+	top: 0px;
+	left: 0px;
+	transform: rotate(45deg);
+}
+
+.mobile-button.open span:after {
+	background: #3e3e3e;
+	bottom: 0px;
+	left: 0px;
+	transform: rotate(-45deg);
+}
+
+.nav {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 92px;
+	width: 100%;
+	background: linear-gradient(180deg, #49494a 17.19%, #383836 100%);
+}
+
+.openNav.nav {
+	display: block;
+}
+
+.nav-menu {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	height: auto;
+}
+
+.nav-menu__item {
+	position: relative;
+	padding: 15px 0;
+	border-bottom: 1px solid rgba(228, 181, 107, 0.5);
+}
+
+.nav-menu__item:hover .nav-menu__link,
+.nav-menu__item:focus .nav-menu__link {
+	cursor: pointer;
+	font-size: 18px;
+	color: #aeaeae;
+}
+
+.nav-menu__link {
+	text-decoration: none;
+	font-weight: 00;
+	line-height: 21px;
+	font-size: 18px;
+	color: #ffffff;
+}
+
+.nav-menu__flag {
+	float: right;
+	margin-left: 20px;
+}
+
+/* --- Main --- */
+.slider,
+.lessons__item {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.slider,
+.lessons-screen {
+	padding: 30px 0 0;
+	border-bottom: 1px solid rgba(228, 181, 107, 0.5);
+}
+
+.lessons__item {
+	padding-bottom: 30px;
+}
+
+.slider__h1,
+.lesson__title {
+	font-family: 'League Spartan', sans-serif;
+	font-size: 32px;
+	line-height: 1.5;
+	text-transform: uppercase;
+}
+
+.slider__desc {
+	color: rgb(92, 91, 91);
+	font-style: italic;
+}
+
+.slider__btn {
+	text-transform: uppercase;
+	background-color: #ffd237;
+	padding: 10px 25px;
+	margin: 20px 0 70px;
+	border: 0;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.slider__img {
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.lesson__text {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.lesson_li {
+	margin-left: 20px;
+}
+
+.lesson__img {
+	margin: 30px 0 50px;
+}
